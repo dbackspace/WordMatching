@@ -6,6 +6,9 @@ import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class DBController {
     private static final String TAG = "DataAdapterHelper";
 
@@ -40,6 +43,20 @@ public class DBController {
         Cursor c = mDatabase.rawQuery(rawQuery, selectionArgs);
         boolean exist = (c.getCount() > 0);
         return exist;
+    }
+
+    public String recommendWordNotInSet(HashSet<String> setWord, char recommendChar) {
+        String tableName = ("" + recommendChar).toUpperCase();
+        String characterLower = ("" + recommendChar).toLowerCase();
+        String rawQuery = "select * from " + tableName + " where word like " + "'" + characterLower + "%' order by random() limit 1";
+        Cursor c;
+        String res = "";
+        do {
+            c = mDatabase.rawQuery(rawQuery, null);
+            c.moveToFirst();
+            res = c.getString(c.getColumnIndex("word"));
+        } while (setWord.contains(res));
+        return res;
     }
 
     public void close() {
