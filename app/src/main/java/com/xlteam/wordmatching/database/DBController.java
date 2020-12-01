@@ -10,7 +10,7 @@ public class DBController {
     private static final String TAG = "DataAdapterHelper";
 
     private final Context mContext;
-    private SQLiteDatabase mDb;
+    private SQLiteDatabase mDatabase;
     private DatabaseHelper mDbHelper;
 
     public DBController(Context context) {
@@ -25,10 +25,9 @@ public class DBController {
 
     public DBController open() throws SQLException {
         try {
-            mDbHelper.openDataBase();
-            mDb = mDbHelper.getDatabase();
+            mDatabase = mDbHelper.openDataBase();
         } catch (SQLException mSQLException) {
-            Log.d(TAG, "open >>"+ mSQLException.toString());
+            Log.d(TAG, "open >>" + mSQLException.toString());
             throw mSQLException;
         }
         return this;
@@ -38,12 +37,14 @@ public class DBController {
         String tableName = ("" + searchWord.charAt(0)).toUpperCase();
         String[] selectionArgs = {searchWord};
         String rawQuery = "select * from " + tableName + " where word =?";
-        Cursor c = mDb.rawQuery(rawQuery, selectionArgs);
+        Cursor c = mDatabase.rawQuery(rawQuery, selectionArgs);
         boolean exist = (c.getCount() > 0);
         return exist;
     }
 
     public void close() {
-        mDbHelper.close();
+        if (mDatabase != null) {
+            mDatabase.close();
+        }
     }
 }
