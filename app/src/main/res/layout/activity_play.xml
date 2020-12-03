@@ -1,9 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.play.PlayActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvWord"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/rlInput" />
+
+    <RelativeLayout
+        android:id="@+id/rlInput"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true">
+
+        <ImageView
+            android:id="@+id/imgSupport"
+            style="@style/ImageButton"
+            android:src="@drawable/ic_support" />
+
+        <EditText
+            android:id="@+id/edtInputWord"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toStartOf="@id/imgSend"
+            android:layout_toEndOf="@id/imgSupport" />
+
+        <ImageView
+            android:id="@+id/imgSend"
+            style="@style/ImageButton"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/ic_send" />
+    </RelativeLayout>
+</RelativeLayout>
