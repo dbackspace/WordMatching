@@ -12,6 +12,7 @@ import com.xlteam.wordmatching.R;
 
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 
 public class WordAdapter extends RecyclerView.Adapter {
     private final int TYPE_SENT = 0;
@@ -61,9 +62,8 @@ public class WordAdapter extends RecyclerView.Adapter {
         return mWords.size();
     }
 
-    public void updateData(HashSet<String> sets) {
-        mWords = new ArrayList<>();
-        mWords.addAll(sets);
+    public void updateData(List<String> listWord) {
+        mWords.addAll(listWord);
         notifyDataSetChanged();
     }
 
