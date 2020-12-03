@@ -42,10 +42,7 @@ public class PlayActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String word = edtInputWord.getText().toString();
-                if (prevLastCharacter == '_') {
-                    prevLastCharacter = word.charAt(word.length() - 1);
-                }
-                if (word.charAt(0) == prevLastCharacter && !setData.contains(word) && dbController.checkWordInDB(word)) {
+                if (prevLastCharacter == '_' || (word.charAt(0) == prevLastCharacter && !setData.contains(word) && dbController.checkWordInDB(word))) {
                     setData.add(word);
                     String wordBot = dbController.recommendWordNotInSet(setData, word.charAt(word.length() - 1));
                     prevLastCharacter = wordBot.charAt(wordBot.length() - 1);
