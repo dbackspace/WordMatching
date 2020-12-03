@@ -49,6 +49,8 @@ public class PlayActivity extends AppCompatActivity {
                     setData.add(wordBot);
                     mWordAdapter.updateData(Arrays.asList(word, wordBot));
                     rvWord.scrollToPosition(setData.size() - 1);
+                    edtInputWord.setText(prevLastCharacter + "");
+                    edtInputWord.setSelection(edtInputWord.getText().length());
                 }
             }
         });
