@@ -17,17 +17,43 @@
         android:layout_height="50dp"
         android:layout_alignParentBottom="true">
 
-        <ImageView
-            android:id="@+id/imgSupport"
-            style="@style/ImageButton"
-            android:src="@drawable/ic_support" />
+        <RelativeLayout
+            android:id="@+id/rlSupport"
+            android:layout_width="50dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_support" />
+
+            <TextView
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/bg_number_support"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center"
+                android:text="3"
+                android:textColor="@color/color_FA"
+                android:textSize="8dp" />
+        </RelativeLayout>
 
         <EditText
             android:id="@+id/edtInputWord"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginTop="7dp"
+            android:layout_marginBottom="7dp"
             android:layout_toStartOf="@id/imgSend"
-            android:layout_toEndOf="@id/imgSupport" />
+            android:layout_toEndOf="@id/rlSupport"
+            android:background="@drawable/bg_input_word"
+            android:gravity="center_vertical"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp" />
 
         <ImageView
             android:id="@+id/imgSend"
