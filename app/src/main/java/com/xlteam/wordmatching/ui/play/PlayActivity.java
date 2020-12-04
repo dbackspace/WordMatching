@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -16,10 +17,11 @@ import java.util.Arrays;
 import java.util.HashSet;
 
 public class PlayActivity extends AppCompatActivity {
-    ImageView imgSupport, imgSend;
+    ImageView imgSend;
     EditText edtInputWord;
     RecyclerView rvWord;
     WordAdapter mWordAdapter;
+    RelativeLayout rlSupport;
     HashSet<String> setData;
     DBController dbController;
     char prevLastCharacter = '_';
@@ -59,7 +61,7 @@ public class PlayActivity extends AppCompatActivity {
     }
 
     void findViewById() {
-        imgSupport = findViewById(R.id.imgSupport);
+        rlSupport = findViewById(R.id.rlSupport);
         imgSend = findViewById(R.id.imgSend);
         edtInputWord = findViewById(R.id.edtInputWord);
         rvWord = findViewById(R.id.rvWord);
