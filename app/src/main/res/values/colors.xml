@@ -5,4 +5,11 @@
     <color name="colorPrimaryLight">#FAFAFA</color>
     <color name="colorAccent">#03DAC5</color>
     <color name="color_play_button">#082BE4</color>
+    <color name="color_white">#FFFFFF</color>
+    <color name="color_FA">#FAFAFA</color>
+    <color name="color_blue">#3852FA</color>
+    <color name="color_E0">#E0E0E0</color>
+    <color name="color_B6">#B6B6B6</color>
+    <color name="color_red">#E61212</color>
+    <color name="color_25">#252525</color>
 </resources>
