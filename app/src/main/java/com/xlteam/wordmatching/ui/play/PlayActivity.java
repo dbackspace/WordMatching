@@ -17,6 +17,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.xlteam.wordmatching.R;
 import com.xlteam.wordmatching.database.DBController;
+import com.xlteam.wordmatching.utils.CustomKeyboard;
 import com.xlteam.wordmatching.utils.Utility;
 
 import java.util.Arrays;
@@ -32,6 +33,7 @@ public class PlayActivity extends AppCompatActivity {
     DBController dbController;
     char prevLastCharacter = '_';
     TextView tvFirst, numberSupport, tvNotice;
+    CustomKeyboard mCustomKeyboard;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +48,9 @@ public class PlayActivity extends AppCompatActivity {
         rvWord.setLayoutManager(linearLayoutManager);
         mWordAdapter = new WordAdapter(setData, 2, 0);
         rvWord.setAdapter(mWordAdapter);
+
+        mCustomKeyboard = new CustomKeyboard(this, R.id.keyboardview, R.xml.hexkbd);
+        mCustomKeyboard.registerEditText(R.id.edtInputWord);
 
         imgSend.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -123,5 +128,13 @@ public class PlayActivity extends AppCompatActivity {
                 tvNotice.setVisibility(View.GONE);
             }
         }, 2000);
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (mCustomKeyboard.isCustomKeyboardVisible())
+            mCustomKeyboard.hideCustomKeyboard();
+        else
+            this.finish();
     }
 }

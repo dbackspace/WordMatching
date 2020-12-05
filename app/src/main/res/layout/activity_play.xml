@@ -70,7 +70,7 @@
         android:id="@+id/rlInput"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_alignParentBottom="true">
+        android:layout_above="@id/keyboardview">
 
         <RelativeLayout
             android:id="@+id/rlSupport"
@@ -145,5 +145,15 @@
         android:gravity="center"
         android:textColor="@color/color_white"
         android:textSize="16dp"
+        android:visibility="gone" />
+
+    <android.inputmethodservice.KeyboardView
+        android:id="@+id/keyboardview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
         android:visibility="gone" />
 </RelativeLayout>
