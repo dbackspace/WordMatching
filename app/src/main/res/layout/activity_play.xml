@@ -33,8 +33,7 @@
 
             <TextView
                 android:id="@+id/tvNamePlayer1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/TextViewPlayerName"
                 android:text="Player 1" />
         </LinearLayout>
 
@@ -53,8 +52,7 @@
 
             <TextView
                 android:id="@+id/tvNamePlayer2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/TextViewPlayerName"
                 android:text="Player 2" />
         </LinearLayout>
     </RelativeLayout>
