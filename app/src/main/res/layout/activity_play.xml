@@ -79,7 +79,7 @@
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_centerInParent="true"
-                android:src="@drawable/ic_support" />
+                android:src="@drawable/ic_help" />
 
             <TextView
                 android:id="@+id/numberHelp"
@@ -88,7 +88,7 @@
                 android:layout_alignParentEnd="true"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="10dp"
-                android:background="@drawable/bg_number_support"
+                android:background="@drawable/bg_number_help"
                 android:fontFamily="sans-serif-medium"
                 android:gravity="center"
                 android:text="3"
