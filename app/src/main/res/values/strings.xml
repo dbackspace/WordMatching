@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">WordMatching</string>
+    <string name="must_start_game">Bạn phải bắt đầu trò chơi</string>
+    <string name="exist_word">Từ này đã tồn tại</string>
+    <string name="undefine_word">Từ này không có nghĩa</string>
+    <string name="no_number_help">Đã hết gợi ý</string>
 </resources>

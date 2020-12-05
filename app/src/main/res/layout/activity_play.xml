@@ -67,13 +67,13 @@
     <RelativeLayout
         android:id="@+id/rlInput"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_above="@id/keyboardview">
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
 
         <RelativeLayout
-            android:id="@+id/rlSupport"
+            android:id="@+id/rlHelp"
             android:layout_width="50dp"
-            android:layout_height="match_parent">
+            android:layout_height="50dp">
 
             <ImageView
                 android:layout_width="30dp"
@@ -82,7 +82,7 @@
                 android:src="@drawable/ic_support" />
 
             <TextView
-                android:id="@+id/numberSupport"
+                android:id="@+id/numberHelp"
                 android:layout_width="12dp"
                 android:layout_height="12dp"
                 android:layout_alignParentEnd="true"
@@ -97,12 +97,13 @@
         </RelativeLayout>
 
         <LinearLayout
+            android:id="@+id/ll_input"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="7dp"
-            android:layout_marginBottom="7dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
             android:layout_toStartOf="@id/imgSend"
-            android:layout_toEndOf="@id/rlSupport"
+            android:layout_toEndOf="@id/rlHelp"
             android:background="@drawable/bg_input_word"
             android:gravity="center_vertical"
             android:orientation="horizontal"
@@ -133,6 +134,16 @@
             style="@style/ImageButton"
             android:layout_alignParentEnd="true"
             android:src="@drawable/ic_send" />
+
+        <android.inputmethodservice.KeyboardView
+            android:id="@+id/keyboard_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll_input"
+            android:layout_centerHorizontal="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:visibility="gone" />
     </RelativeLayout>
 
     <TextView
@@ -143,15 +154,5 @@
         android:gravity="center"
         android:textColor="@color/color_white"
         android:textSize="16dp"
-        android:visibility="gone" />
-
-    <android.inputmethodservice.KeyboardView
-        android:id="@+id/keyboardview"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:focusable="true"
-        android:focusableInTouchMode="true"
         android:visibility="gone" />
 </RelativeLayout>

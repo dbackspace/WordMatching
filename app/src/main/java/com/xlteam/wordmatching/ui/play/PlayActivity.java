@@ -28,18 +28,27 @@ public class PlayActivity extends AppCompatActivity {
     EditText edtInputWord;
     RecyclerView rvWord;
     WordAdapter mWordAdapter;
-    RelativeLayout rlSupport;
+    RelativeLayout rlHelp;
     HashSet<String> setData;
     DBController dbController;
     char prevLastCharacter = '_';
-    TextView tvFirst, numberSupport, tvNotice;
+    TextView tvFirst, numberHelp, tvNotice;
     CustomKeyboard mCustomKeyboard;
+    int help;
+    Handler handlerNotice = new Handler();
+    Runnable runnableNotice = new Runnable() {
+        @Override
+        public void run() {
+            tvNotice.setVisibility(View.GONE);
+        }
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_play);
         setData = new HashSet<>(); //get data cũ hoặc khởi tạo
+        help = 10; //get data cũ
         dbController = new DBController(this);
         dbController.createDatabase();
         dbController.open(); // tối về cho cái của nợ này vào controller cả
@@ -49,9 +58,11 @@ public class PlayActivity extends AppCompatActivity {
         mWordAdapter = new WordAdapter(setData, 2, 0);
         rvWord.setAdapter(mWordAdapter);
 
-        mCustomKeyboard = new CustomKeyboard(this, R.id.keyboardview, R.xml.hexkbd);
+        mCustomKeyboard = new CustomKeyboard(this, R.id.keyboard_view, R.xml.hexkbd);
         mCustomKeyboard.registerEditText(R.id.edtInputWord);
 
+        if (help >= 10) numberHelp.setText("9+");
+        else numberHelp.setText(String.valueOf(help));
         imgSend.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -61,14 +72,17 @@ public class PlayActivity extends AppCompatActivity {
             }
         });
 
-        rlSupport.setOnClickListener(new View.OnClickListener() {
+        rlHelp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (setData.size() == 0) {
-                    showNotice("Bạn phải bắt đầu trò chơi...");
+                if (help == 0) {
+                    showNotice(getString(R.string.no_number_help));
+                } else if (setData.size() == 0) {
+                    showNotice(getString(R.string.must_start_game));
                 } else {
                     String wordRecommend = dbController.recommendWordNotInSet(setData, prevLastCharacter);
                     sendWord(wordRecommend);
+                    numberHelp.setText(String.valueOf(--help));
                 }
             }
         });
@@ -96,7 +110,11 @@ public class PlayActivity extends AppCompatActivity {
     }
 
     void sendWord(String word) {
-        if (!setData.contains(word) && dbController.checkWordInDB(word)) {
+        if (setData.contains(word)) {
+            showNotice(getString(R.string.exist_word));
+        } else if (!dbController.checkWordInDB(word)) {
+            showNotice(getString(R.string.undefine_word));
+        } else {
             setData.add(word);
             String wordBot = dbController.recommendWordNotInSet(setData, word.charAt(word.length() - 1));
             prevLastCharacter = wordBot.charAt(wordBot.length() - 1);
@@ -110,24 +128,20 @@ public class PlayActivity extends AppCompatActivity {
     }
 
     void findViewById() {
-        rlSupport = findViewById(R.id.rlSupport);
+        rlHelp = findViewById(R.id.rlHelp);
         imgSend = findViewById(R.id.imgSend);
         edtInputWord = findViewById(R.id.edtInputWord);
         rvWord = findViewById(R.id.rvWord);
         tvFirst = findViewById(R.id.tvFirst);
-        numberSupport = findViewById(R.id.numberSupport);
+        numberHelp = findViewById(R.id.numberHelp);
         tvNotice = findViewById(R.id.tvNotice);
     }
 
     void showNotice(String notice) {
         tvNotice.setText(notice);
         tvNotice.setVisibility(View.VISIBLE);
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                tvNotice.setVisibility(View.GONE);
-            }
-        }, 2000);
+        handlerNotice.removeCallbacks(runnableNotice);
+        handlerNotice.postDelayed(runnableNotice, 2000);
     }
 
     @Override
