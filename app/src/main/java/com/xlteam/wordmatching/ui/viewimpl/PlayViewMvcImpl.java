@@ -1,4 +1,4 @@
-package com.xlteam.wordmatching.ui.playscreen;
+package com.xlteam.wordmatching.ui.viewimpl;
 
 import android.text.Editable;
 import android.text.TextUtils;
@@ -17,6 +17,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.xlteam.wordmatching.R;
 import com.xlteam.wordmatching.ui.common.views.BaseObservableViewMvc;
+import com.xlteam.wordmatching.ui.view.WordAdapter;
 
 import java.util.Arrays;
 import java.util.HashSet;

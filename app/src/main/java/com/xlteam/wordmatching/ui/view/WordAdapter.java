@@ -1,4 +1,4 @@
-package com.xlteam.wordmatching.ui.playscreen;
+package com.xlteam.wordmatching.ui.view;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -21,7 +21,7 @@ public class WordAdapter extends RecyclerView.Adapter {
     private int maxUser;
     private int numberUser;
 
-    WordAdapter(HashSet<String> words, int maxUser, int numberUser) {
+    public WordAdapter(HashSet<String> words, int maxUser, int numberUser) {
         this.maxUser = maxUser;
         this.numberUser = numberUser;
         mWords = new ArrayList<>();

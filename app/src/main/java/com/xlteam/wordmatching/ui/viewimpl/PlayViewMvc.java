@@ -1,4 +1,4 @@
-package com.xlteam.wordmatching.ui.playscreen;
+package com.xlteam.wordmatching.ui.viewimpl;
 
 import com.xlteam.wordmatching.ui.common.views.ObservableViewMvc;
 
