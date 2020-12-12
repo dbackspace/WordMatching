@@ -33,8 +33,6 @@ public class PlayActivity extends BaseActivity
     @Override
     protected void onStart() {
         super.onStart();
-
-        dbController.open(); // tối về cho cái của nợ này vào controller cả
         mViewMvc.registerListener(this);
     }
 

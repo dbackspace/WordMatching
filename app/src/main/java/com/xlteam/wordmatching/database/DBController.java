@@ -27,7 +27,7 @@ public class DBController {
         open();
     }
 
-    public void open() throws SQLException {
+    private void open() throws SQLException {
         try {
             mDatabase = mDbHelper.openDataBase();
         } catch (SQLException mSQLException) {
