@@ -12,13 +12,11 @@ import java.util.Set;
 public class DBController {
     private static final String TAG = "DataAdapterHelper";
 
-    private final Context mContext;
     private SQLiteDatabase mDatabase;
     private DatabaseHelper mDbHelper;
 
     public DBController(Context context) {
-        this.mContext = context;
-        mDbHelper = new DatabaseHelper(mContext);
+        mDbHelper = new DatabaseHelper(context);
     }
 
     public DBController createDatabase() {

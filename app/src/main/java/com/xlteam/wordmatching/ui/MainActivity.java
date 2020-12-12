@@ -16,7 +16,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        String searchWord = "aaa";
         HashSet<String> listWord = new HashSet<>();
         listWord.add("aaa");
         listWord.add("a");

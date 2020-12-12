@@ -1,4 +1,4 @@
-package com.xlteam.wordmatching.ui.play;
+package com.xlteam.wordmatching.ui.playscreen;
 
 import android.view.LayoutInflater;
 import android.view.View;

@@ -1,4 +1,4 @@
-package com.xlteam.wordmatching.utils;
+package com.xlteam.wordmatching.common.utils;
 
 import android.content.Context;
 import android.content.SharedPreferences;

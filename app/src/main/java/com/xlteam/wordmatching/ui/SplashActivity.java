@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.xlteam.wordmatching.ui.play.PlayActivity;
+import com.xlteam.wordmatching.ui.playscreen.PlayActivity;
 
 public class SplashActivity extends AppCompatActivity {
 

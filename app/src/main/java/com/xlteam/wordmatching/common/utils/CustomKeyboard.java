@@ -1,4 +1,4 @@
-package com.xlteam.wordmatching.utils;
+package com.xlteam.wordmatching.common.utils;
 
 import android.app.Activity;
 import android.inputmethodservice.Keyboard;
@@ -18,11 +18,13 @@ import android.view.inputmethod.InputConnection;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 
+import com.xlteam.wordmatching.R;
+
 import static android.content.Context.AUDIO_SERVICE;
 
 public class CustomKeyboard {
-    private KeyboardView mKeyboardView;
-    private Activity mHostActivity;
+    private final KeyboardView mKeyboardView;
+    private final Activity mHostActivity;
     private OnKeyboardActionListener mOnKeyboardActionListener = new OnKeyboardActionListener() {
 
         public final static int CodeDelete = -5; // Keyboard.KEYCODE_DELETE
@@ -70,13 +72,15 @@ public class CustomKeyboard {
         }
     };
 
-    public CustomKeyboard(Activity host, int viewid, int layoutid) {
+    public CustomKeyboard(Activity host) {
         mHostActivity = host;
-        mKeyboardView = (KeyboardView) mHostActivity.findViewById(viewid);
-        mKeyboardView.setKeyboard(new Keyboard(mHostActivity, layoutid));
+        mKeyboardView = (KeyboardView) mHostActivity.findViewById(R.id.keyboard_view);
+        mKeyboardView.setKeyboard(new Keyboard(mHostActivity, R.xml.hexkbd));
         mKeyboardView.setPreviewEnabled(false); // NOTE Do not show the preview balloons
         mKeyboardView.setOnKeyboardActionListener(mOnKeyboardActionListener);
         mHostActivity.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
+
+        registerEditText(R.id.edtInputWord);
     }
 
     public boolean isCustomKeyboardVisible() {
