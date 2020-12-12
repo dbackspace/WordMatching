@@ -34,7 +34,6 @@ public class PlayActivity extends BaseActivity
     protected void onStart() {
         super.onStart();
 
-        dbController.createDatabase();
         dbController.open(); // tối về cho cái của nợ này vào controller cả
         mViewMvc.registerListener(this);
     }

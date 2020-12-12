@@ -7,31 +7,33 @@ import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
 
 import java.util.HashSet;
-import java.util.Set;
 
 public class DBController {
     private static final String TAG = "DataAdapterHelper";
 
     private SQLiteDatabase mDatabase;
     private DatabaseHelper mDbHelper;
+    private static DBController INSTANCE;
 
-    public DBController(Context context) {
+    public static DBController getInstance(Context context) {
+        if (INSTANCE == null) {
+            INSTANCE = new DBController(context);
+        }
+        return INSTANCE;
+    }
+
+    private DBController(Context context) {
         mDbHelper = new DatabaseHelper(context);
+        open();
     }
 
-    public DBController createDatabase() {
-        mDbHelper.createDataBase();
-        return this;
-    }
-
-    public DBController open() throws SQLException {
+    public void open() throws SQLException {
         try {
             mDatabase = mDbHelper.openDataBase();
         } catch (SQLException mSQLException) {
             Log.d(TAG, "open >>" + mSQLException.toString());
             throw mSQLException;
         }
-        return this;
     }
 
     public boolean checkWordInDB(String searchWord) {

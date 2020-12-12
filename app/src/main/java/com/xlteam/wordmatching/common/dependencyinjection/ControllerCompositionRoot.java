@@ -39,7 +39,7 @@ public class ControllerCompositionRoot {
     }
 
     public DBController getDbController() {
-        return new DBController(getContext());
+        return DBController.getInstance(getContext());
     }
 
     public CustomKeyboard getCustomKeyboard() {

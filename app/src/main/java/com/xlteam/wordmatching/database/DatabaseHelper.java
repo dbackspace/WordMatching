@@ -22,6 +22,7 @@ public class DatabaseHelper {
     public DatabaseHelper(Context context) {
         DB_FILE = context.getDatabasePath(DB_NAME);
         this.mContext = context;
+        createDataBase();
     }
 
     public void createDataBase() {
