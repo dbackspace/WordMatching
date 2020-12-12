@@ -1,14 +1,10 @@
-package com.xlteam.wordmatching.ui;
+package com.xlteam.wordmatching.ui.main;
+
+import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.os.Bundle;
-import android.widget.Toast;
-
 import com.xlteam.wordmatching.R;
-import com.xlteam.wordmatching.database.DBController;
-
-import java.util.HashSet;
 
 public class MainActivity extends AppCompatActivity {
     @Override
