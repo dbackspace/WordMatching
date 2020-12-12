@@ -5,8 +5,8 @@ import android.view.ViewGroup;
 
 import androidx.annotation.Nullable;
 
-import com.xlteam.wordmatching.ui.viewimpl.PlayViewMvc;
-import com.xlteam.wordmatching.ui.viewimpl.PlayViewMvcImpl;
+import com.xlteam.wordmatching.ui.playscreen.PlayViewMvc;
+import com.xlteam.wordmatching.ui.playscreen.PlayViewMvcImpl;
 
 public class ViewMvcFactory {
     private final LayoutInflater mLayoutInflater;

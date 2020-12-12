@@ -8,7 +8,7 @@ import androidx.fragment.app.FragmentActivity;
 import com.xlteam.wordmatching.common.utils.CustomKeyboard;
 import com.xlteam.wordmatching.database.DBController;
 import com.xlteam.wordmatching.ui.common.ViewMvcFactory;
-import com.xlteam.wordmatching.ui.controller.PlayActivityController;
+import com.xlteam.wordmatching.ui.playscreen.PlayActivityController;
 
 public class ControllerCompositionRoot {
     private final ActivityCompositionRoot mActivityCompositionRoot;

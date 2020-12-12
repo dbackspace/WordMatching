@@ -1,4 +1,4 @@
-package com.xlteam.wordmatching.ui.view;
+package com.xlteam.wordmatching.ui.main;
 
 import android.os.Bundle;
 

@@ -1,6 +1,4 @@
-package com.xlteam.wordmatching.ui.controller;
-
-import com.xlteam.wordmatching.ui.viewimpl.PlayViewMvc;
+package com.xlteam.wordmatching.ui.playscreen;
 
 public class PlayActivityController {
     private PlayViewMvc mViewMvc;
