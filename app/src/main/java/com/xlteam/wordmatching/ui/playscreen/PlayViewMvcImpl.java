@@ -66,11 +66,9 @@ public class PlayViewMvcImpl extends BaseObservableViewMvc<PlayViewMvc.Listener>
             @Override
             public void onClick(View v) {
                 if (help == 0) {
-                    String msgNotice = getString(R.string.no_number_help);
-                    showNotice(msgNotice);
+                    showNotice(R.string.no_number_help);
                 } else if (mCheckedData.size() == 0) {
-                    String msgNotice = getString(R.string.must_start_game);
-                    showNotice(msgNotice);
+                    showNotice(R.string.must_start_game);
                 } else {
                     for (Listener listener : getListeners()) {
                         listener.sendWordClicked(null, true);
@@ -85,11 +83,11 @@ public class PlayViewMvcImpl extends BaseObservableViewMvc<PlayViewMvc.Listener>
         setEnableView(imgSend, false);
     }
 
-    void showNotice(String msgNotice) {
-        tvNotice.setText(msgNotice);
+    void showNotice(int no_number_help) {
+        tvNotice.setText(getString(no_number_help));
         tvNotice.setVisibility(View.VISIBLE);
         for (Listener listener : getListeners()) {
-            listener.showNotice(msgNotice);
+            listener.showNotice(no_number_help);
         }
     }
 
@@ -147,7 +145,8 @@ public class PlayViewMvcImpl extends BaseObservableViewMvc<PlayViewMvc.Listener>
     }
 
     @Override
-    public void setTvNotice() {
-        tvNotice.setVisibility(View.GONE);
+    public void setTvNotice(int resIntMsg, int visibleType) {
+        tvNotice.setText(getString(resIntMsg));
+        tvNotice.setVisibility(visibleType);
     }
 }

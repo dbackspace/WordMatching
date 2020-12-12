@@ -4,4 +4,5 @@
     <string name="exist_word">Từ này đã tồn tại</string>
     <string name="undefine_word">Từ này không có nghĩa</string>
     <string name="no_number_help">Đã hết gợi ý</string>
+    <string name="notice_null" />
 </resources>

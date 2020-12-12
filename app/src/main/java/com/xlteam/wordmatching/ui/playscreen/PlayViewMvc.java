@@ -8,12 +8,12 @@ public interface PlayViewMvc extends ObservableViewMvc<PlayViewMvc.Listener> {
     interface Listener {
         void sendWordClicked(String word, boolean isRecommend);
 
-        void showNotice(String msgNotice);
+        void showNotice(int resIntMsg);
     }
 
     HashSet<String> getCheckedData();
 
     void updateAddedData(String word, String wordBot);
 
-    void setTvNotice();
+    void setTvNotice(int resIntMsg, int visibleType);
 }

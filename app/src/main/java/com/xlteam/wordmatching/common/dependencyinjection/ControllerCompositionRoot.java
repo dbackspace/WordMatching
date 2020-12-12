@@ -27,7 +27,7 @@ public class ControllerCompositionRoot {
 
 
     public PlayActivityController getPlayActivityController() {
-        return new PlayActivityController();
+        return new PlayActivityController(getDbController());
     }
 
     public ViewMvcFactory getViewMvcFactory() {
@@ -38,7 +38,7 @@ public class ControllerCompositionRoot {
         return LayoutInflater.from(getContext());
     }
 
-    public DBController getDbController() {
+    private DBController getDbController() {
         return DBController.getInstance(getContext());
     }
 
