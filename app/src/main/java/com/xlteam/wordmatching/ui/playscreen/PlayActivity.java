@@ -2,15 +2,12 @@ package com.xlteam.wordmatching.ui.playscreen;
 
 import android.os.Bundle;
 import android.os.Handler;
-import android.view.View;
 
 import com.xlteam.wordmatching.R;
 import com.xlteam.wordmatching.database.DBController;
 import com.xlteam.wordmatching.common.utils.CustomKeyboard;
-import com.xlteam.wordmatching.common.utils.Utility;
 import com.xlteam.wordmatching.ui.common.controllers.BaseActivity;
 
-import java.util.Arrays;
 import java.util.HashSet;
 
 public class PlayActivity extends BaseActivity

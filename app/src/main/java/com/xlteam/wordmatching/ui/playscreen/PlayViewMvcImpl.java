@@ -16,7 +16,6 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.xlteam.wordmatching.R;
-import com.xlteam.wordmatching.common.utils.Utility;
 import com.xlteam.wordmatching.ui.common.views.BaseObservableViewMvc;
 
 import java.util.Arrays;
@@ -83,7 +82,7 @@ public class PlayViewMvcImpl extends BaseObservableViewMvc<PlayViewMvc.Listener>
 
         edtInputWord.addTextChangedListener(textWatcher);
 
-        Utility.setEnableView(imgSend, false);
+        setEnableView(imgSend, false);
     }
 
     void showNotice(String msgNotice) {
