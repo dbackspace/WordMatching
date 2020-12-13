@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--Line 1-->
+    <TextView
+        android:id="@+id/key_Q"
+        style="@style/TextViewKeyPortrait"
+        android:layout_marginTop="10dp"
+        android:text="Q"
+        app:layout_constraintEnd_toStartOf="@+id/key_W"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/key_W"
+        style="@style/TextViewKeyPortrait"
+        android:layout_marginTop="10dp"
+        android:text="W"
+        app:layout_constraintEnd_toStartOf="@+id/key_E"
+        app:layout_constraintStart_toEndOf="@+id/key_Q"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/key_E"
+        style="@style/TextViewKeyPortrait"
+        android:layout_marginTop="10dp"
+        android:text="E"
+        app:layout_constraintEnd_toStartOf="@+id/key_R"
+        app:layout_constraintStart_toEndOf="@+id/key_W"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/key_R"
+        style="@style/TextViewKeyPortrait"
+        android:layout_marginTop="10dp"
+        android:text="R"
+        app:layout_constraintEnd_toStartOf="@+id/key_T"
+        app:layout_constraintStart_toEndOf="@+id/key_E"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/key_T"
+        style="@style/TextViewKeyPortrait"
+        android:layout_marginTop="10dp"
+        android:text="T"
+        app:layout_constraintEnd_toStartOf="@+id/key_Y"
+        app:layout_constraintStart_toEndOf="@+id/key_R"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/key_Y"
+        style="@style/TextViewKeyPortrait"
+        android:layout_marginTop="10dp"
+        android:text="Y"
+        app:layout_constraintEnd_toStartOf="@+id/key_U"
+        app:layout_constraintStart_toEndOf="@+id/key_T"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/key_U"
+        style="@style/TextViewKeyPortrait"
+        android:layout_marginTop="10dp"
+        android:text="U"
+        app:layout_constraintEnd_toStartOf="@+id/key_I"
+        app:layout_constraintStart_toEndOf="@+id/key_Y"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/key_I"
+        style="@style/TextViewKeyPortrait"
+        android:layout_marginTop="10dp"
+        android:text="I"
+        app:layout_constraintEnd_toStartOf="@+id/key_O"
+        app:layout_constraintStart_toEndOf="@+id/key_U"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/key_O"
+        style="@style/TextViewKeyPortrait"
+        android:layout_marginTop="10dp"
+        android:text="O"
+        app:layout_constraintEnd_toStartOf="@+id/key_P"
+        app:layout_constraintStart_toEndOf="@+id/key_I"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/key_P"
+        style="@style/TextViewKeyPortrait"
+        android:layout_marginTop="10dp"
+        android:text="P"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/key_O"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--Line 2-->
+    <TextView
+        android:id="@+id/key_A"
+        style="@style/TextViewKeyPortrait"
+        android:layout_marginTop="10dp"
+        android:text="A"
+        app:layout_constraintEnd_toStartOf="@+id/key_S"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/key_Q" />
+
+    <TextView
+        android:id="@+id/key_S"
+        style="@style/TextViewKeyPortrait"
+        android:layout_marginTop="10dp"
+        android:text="S"
+        app:layout_constraintEnd_toStartOf="@+id/key_D"
+        app:layout_constraintStart_toEndOf="@+id/key_A"
+        app:layout_constraintTop_toBottomOf="@+id/key_Q" />
+
+    <TextView
+        android:id="@+id/key_D"
+        style="@style/TextViewKeyPortrait"
+        android:layout_marginTop="10dp"
+        android:text="D"
+        app:layout_constraintEnd_toStartOf="@+id/key_F"
+        app:layout_constraintStart_toEndOf="@+id/key_S"
+        app:layout_constraintTop_toBottomOf="@+id/key_Q" />
+
+    <TextView
+        android:id="@+id/key_F"
+        style="@style/TextViewKeyPortrait"
+        android:layout_marginTop="10dp"
+        android:text="F"
+        app:layout_constraintEnd_toStartOf="@+id/key_G"
+        app:layout_constraintStart_toEndOf="@+id/key_D"
+        app:layout_constraintTop_toBottomOf="@+id/key_Q" />
+
+    <TextView
+        android:id="@+id/key_G"
+        style="@style/TextViewKeyPortrait"
+        android:layout_marginTop="10dp"
+        android:text="G"
+        app:layout_constraintEnd_toStartOf="@+id/key_H"
+        app:layout_constraintStart_toEndOf="@+id/key_F"
+        app:layout_constraintTop_toBottomOf="@+id/key_Q" />
+
+    <TextView
+        android:id="@+id/key_H"
+        style="@style/TextViewKeyPortrait"
+        android:layout_marginTop="10dp"
+        android:text="H"
+        app:layout_constraintEnd_toStartOf="@+id/key_J"
+        app:layout_constraintStart_toEndOf="@+id/key_G"
+        app:layout_constraintTop_toBottomOf="@+id/key_Q" />
+
+    <TextView
+        android:id="@+id/key_J"
+        style="@style/TextViewKeyPortrait"
+        android:layout_marginTop="10dp"
+        android:text="J"
+        app:layout_constraintEnd_toStartOf="@+id/key_K"
+        app:layout_constraintStart_toEndOf="@+id/key_H"
+        app:layout_constraintTop_toBottomOf="@+id/key_Q" />
+
+    <TextView
+        android:id="@+id/key_K"
+        style="@style/TextViewKeyPortrait"
+        android:layout_marginTop="10dp"
+        android:text="K"
+        app:layout_constraintEnd_toStartOf="@+id/key_L"
+        app:layout_constraintStart_toEndOf="@+id/key_J"
+        app:layout_constraintTop_toBottomOf="@+id/key_Q" />
+
+    <TextView
+        android:id="@+id/key_L"
+        style="@style/TextViewKeyPortrait"
+        android:layout_marginTop="10dp"
+        android:text="L"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/key_K"
+        app:layout_constraintTop_toBottomOf="@+id/key_Q" />
+
+    <!--Line 3-->
+    <TextView
+        android:id="@+id/key_Z"
+        style="@style/TextViewKeyPortrait"
+        android:layout_marginTop="10dp"
+        android:text="Z"
+        app:layout_constraintEnd_toStartOf="@+id/key_X"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/key_A" />
+
+    <TextView
+        android:id="@+id/key_X"
+        style="@style/TextViewKeyPortrait"
+        android:layout_marginTop="10dp"
+        android:text="X"
+        app:layout_constraintEnd_toStartOf="@+id/key_C"
+        app:layout_constraintStart_toEndOf="@+id/key_Z"
+        app:layout_constraintTop_toBottomOf="@+id/key_A" />
+
+    <TextView
+        android:id="@+id/key_C"
+        style="@style/TextViewKeyPortrait"
+        android:layout_marginTop="10dp"
+        android:text="C"
+        app:layout_constraintEnd_toStartOf="@+id/key_V"
+        app:layout_constraintStart_toEndOf="@+id/key_X"
+        app:layout_constraintTop_toBottomOf="@+id/key_A" />
+
+    <TextView
+        android:id="@+id/key_V"
+        style="@style/TextViewKeyPortrait"
+        android:layout_marginTop="10dp"
+        android:text="V"
+        app:layout_constraintEnd_toStartOf="@+id/key_B"
+        app:layout_constraintStart_toEndOf="@+id/key_C"
+        app:layout_constraintTop_toBottomOf="@+id/key_A" />
+
+    <TextView
+        android:id="@+id/key_B"
+        style="@style/TextViewKeyPortrait"
+        android:layout_marginTop="10dp"
+        android:text="B"
+        app:layout_constraintEnd_toStartOf="@+id/key_N"
+        app:layout_constraintStart_toEndOf="@+id/key_V"
+        app:layout_constraintTop_toBottomOf="@+id/key_A" />
+
+    <TextView
+        android:id="@+id/key_N"
+        style="@style/TextViewKeyPortrait"
+        android:layout_marginTop="10dp"
+        android:text="N"
+        app:layout_constraintEnd_toStartOf="@+id/key_M"
+        app:layout_constraintStart_toEndOf="@+id/key_B"
+        app:layout_constraintTop_toBottomOf="@+id/key_A" />
+
+    <TextView
+        android:id="@+id/key_M"
+        style="@style/TextViewKeyPortrait"
+        android:layout_marginTop="10dp"
+        android:text="M"
+        app:layout_constraintEnd_toStartOf="@+id/key_Del"
+        app:layout_constraintStart_toEndOf="@+id/key_N"
+        app:layout_constraintTop_toBottomOf="@+id/key_A" />
+
+    <TextView
+        android:id="@+id/key_Del"
+        style="@style/TextViewKeyPortrait"
+        android:layout_marginTop="10dp"
+        android:text="Del"
+        app:layout_constraintEnd_toStartOf="@+id/key_OK"
+        app:layout_constraintStart_toEndOf="@+id/key_M"
+        app:layout_constraintTop_toBottomOf="@+id/key_A" />
+
+    <TextView
+        android:id="@+id/key_OK"
+        style="@style/TextViewKeyPortrait"
+        android:layout_marginTop="10dp"
+        android:text="OK"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/key_Del"
+        app:layout_constraintTop_toBottomOf="@+id/key_A" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
