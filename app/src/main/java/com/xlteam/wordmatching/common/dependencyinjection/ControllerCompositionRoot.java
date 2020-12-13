@@ -8,6 +8,7 @@ import androidx.fragment.app.FragmentActivity;
 import com.xlteam.wordmatching.common.utils.CustomKeyboard;
 import com.xlteam.wordmatching.database.DBController;
 import com.xlteam.wordmatching.ui.common.ViewMvcFactory;
+import com.xlteam.wordmatching.ui.menu.MenuActivityController;
 import com.xlteam.wordmatching.ui.playscreen.PlayActivityController;
 
 public class ControllerCompositionRoot {
@@ -28,6 +29,10 @@ public class ControllerCompositionRoot {
 
     public PlayActivityController getPlayActivityController() {
         return new PlayActivityController(getDbController());
+    }
+
+    public MenuActivityController getMenuActivityController() {
+        return new MenuActivityController();
     }
 
     public ViewMvcFactory getViewMvcFactory() {
