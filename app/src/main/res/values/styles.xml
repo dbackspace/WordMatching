@@ -54,4 +54,16 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textColor">@color/color_player_name</item>
     </style>
+
+    <style name="TextViewKeyPortrait">
+        <item name="android:layout_width">30dp</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:background">@drawable/bgpink</item>
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:fontFamily">@font/fredokaone_regular</item>
+        <item name="android:gravity">center</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+    </style>
 </resources>
