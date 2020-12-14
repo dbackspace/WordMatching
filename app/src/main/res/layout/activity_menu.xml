@@ -3,12 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg_menu_gradient"
     tools:context=".ui.menu.MenuActivity">
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#50000000" />
 
     <TextView
         android:id="@+id/tvLocal"
@@ -26,7 +22,6 @@
         android:background="@drawable/bg_button_menu"
         android:text="online" />
 
-    <include
-        layout="@layout/keyboard_portrait"/>
+    <include layout="@layout/keyboard_portrait" />
 
 </RelativeLayout>

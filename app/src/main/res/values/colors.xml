@@ -14,4 +14,7 @@
     <color name="color_25">#252525</color>
     <color name="color_player_name">#252525</color>
     <color name="color_3CC2F5">#3CC2F5</color>
+    <color name="gradient_start">#91EAE4</color>
+    <color name="gradient_center">#86A8E7</color>
+    <color name="gradient_end">#7F7FD5</color>
 </resources>
